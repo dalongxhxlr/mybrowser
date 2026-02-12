@@ -3,7 +3,9 @@
 🟦 打开 Codespaces 的流程
 打开项目
 在终端执行：
+
 chmod +x run.sh
+
 ./run.sh
 打开 3000 端口 → 进入桌面
 你会得到一个：

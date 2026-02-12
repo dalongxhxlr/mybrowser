@@ -1,6 +1,16 @@
 #!/usr/bin/env bash
 set -e
 
+echo "=== 检测并禁用无效源 ==="
+for f in /etc/apt/sources.list.d/*.list; do
+  if [ -f "$f" ]; then
+    if grep -q "yarnpkg.com" "$f" || grep -q "mozilla.org" "$f"; then
+      echo "禁用无效源: $f"
+      sudo sed -i 's/^/#/' "$f"
+    fi
+  fi
+done
+
 echo "=== 更新软件源 ==="
 sudo apt update || true
 

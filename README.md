@@ -7,6 +7,7 @@
 
 Code
 chmod +x run.sh
+
 ./run.sh
 
 打开 3000 端口 → 进入桌面

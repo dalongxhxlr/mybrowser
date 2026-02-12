@@ -2,7 +2,7 @@
 set -e
 
 echo "=== 更新软件源 ==="
-sudo apt update
+sudo apt update || true
 
 echo "=== 安装 Falkon 浏览器 ==="
 sudo apt install -y falkon
